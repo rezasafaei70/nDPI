@@ -365,7 +365,15 @@ typedef enum {
   NDPI_PROTOCOL_BACNET                = 334,
   NDPI_PROTOCOL_OICQ                  = 335,
   NDPI_PROTOCOL_HOTS                  = 336, /* Heroes of the Storm */
-
+  NDPI_PROTOCOL_TELEGRAM_CALL = 337 ,
+  NDPI_PROTOCOL_RUBIKA_CALL = 338 ,
+//  NDPI_PROTOCOL_RUBIKA = 339 ,
+//  NDPI_PROTOCOL_RUBIKAFiles = 340 ,
+//  NDPI_PROTOCOL_RUBIKAMassemger = 341 ,
+  NDPI_PROTOCOL_BALE = 342,
+  NDPI_PROTOCOL_BALE_FILE     = 343 ,
+  NDPI_PROTOCOL_BALE_MESSAGE = 344 ,
+  NDPI_PROTOCOL_ETTA = 345,
 
 #ifdef CUSTOM_NDPI_PROTOCOLS
 #include "../../../nDPI-custom/custom_ndpi_protocol_ids.h"
