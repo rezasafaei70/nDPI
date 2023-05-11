@@ -80,9 +80,9 @@ void ndpi_search_rubika(struct ndpi_detection_module_struct *ndpi_struct,
 
     if (packet->tcp != NULL) {
 
-        printf("\n\npackets asasd ");
+
         for(int i=0;i<packet->payload_packet_len;i++){
-            printf("%02x ",packet->payload[i]);
+//            printf("%02x ",packet->payload[i]);
 
             if(packet->payload[i]==0x69 && packet->payload[i+1]==0x72 && packet->payload[i+2]==0x61 && packet->payload[i+3]==0x6e && packet->payload[i+4]==0x6c && packet->payload[i+5]==0x6d  && packet->payload[i+6]==0x73 ){
                 rubika_1=1;
@@ -169,6 +169,7 @@ void ndpi_search_rubika(struct ndpi_detection_module_struct *ndpi_struct,
 
 
 void init_rubika_dissector(struct ndpi_detection_module_struct *ndpi_struct, u_int32_t *id) {
+
     ndpi_set_bitmask_protocol_detection("RUBIKA", ndpi_struct, *id,
                                         NDPI_PROTOCOL_RUBIKA,
                                         ndpi_search_rubika,

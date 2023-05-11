@@ -4595,6 +4595,14 @@ static int ndpi_callback_init(struct ndpi_detection_module_struct *ndpi_str) {
     /* STARCRAFT */
     init_starcraft_dissector(ndpi_str, &a);
 
+//    etta
+    init_etta_dissector(ndpi_str, &a);
+    // bale
+    init_bale_dissector(ndpi_str, &a);
+//    rubika
+    init_rubika_dissector(ndpi_str, &a);
+
+
     /* TLS+DTLS */
     init_tls_dissector(ndpi_str, &a);
 
@@ -4885,9 +4893,7 @@ static int ndpi_callback_init(struct ndpi_detection_module_struct *ndpi_str) {
 
     /* TELEGRAM */
     init_telegram_dissector(ndpi_str, &a);
-    init_bale_dissector(ndpi_str, &a);
-    init_rubika_dissector(ndpi_str, &a);
-    init_etta_dissector(ndpi_str, &a);
+
 
     /* QUIC */
     init_quic_dissector(ndpi_str, &a);

@@ -259,6 +259,7 @@ extern "C" {
 					   u_int8_t b_save_bitmask_unknow,
 					   u_int8_t b_add_detection_bitmask);
 
+
   /**
    * Sets the protocol bitmask2
    *

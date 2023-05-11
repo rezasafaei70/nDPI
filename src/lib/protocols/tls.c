@@ -976,6 +976,7 @@ static int ndpi_search_tls_tcp(struct ndpi_detection_module_struct *ndpi_struct,
   /* This function is also called by "extra dissection" data path. Unfortunately,
      generic "extra function" code doesn't honour protocol bitmask.
      TODO: handle that in ndpi_main.c for all the protocols */
+
   if(packet->payload_packet_len == 0 ||
      packet->tcp_retransmission) {
 #ifdef DEBUG_TLS_MEMORY

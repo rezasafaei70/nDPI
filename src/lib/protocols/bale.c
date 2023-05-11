@@ -58,7 +58,7 @@ void ndpi_search_bale(struct ndpi_detection_module_struct *ndpi_struct,
 //      printf(" reza \n ");
         // printf("packetssss  %d", packet->payload_packet_len);
         for (int i = 0; i < packet->payload_packet_len; i++) {
-            printf("%02x  ",packet->payload[i]);
+//            printf("%02x  ",packet->payload[i]);
 //
             if (packet->payload[i] == 0xff && packet->payload[i + 4] == 0x27 && packet->payload[i + 5] == 0x05 &&
                 packet->payload[i + 6] == 0x07 && packet->payload[i + 11] == 0x20) {
