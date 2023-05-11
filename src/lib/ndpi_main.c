@@ -1701,6 +1701,30 @@ static void ndpi_init_protocol_defaults(struct ndpi_detection_module_struct *ndp
                             "RUBIKA_CALL", NDPI_PROTOCOL_CATEGORY_VOIP,
                             ndpi_build_default_ports(ports_a, 0, 0, 0, 0, 0) /* TCP */,
                             ndpi_build_default_ports(ports_b, 0, 0, 0, 0, 0) /* UDP */);
+    ndpi_set_proto_defaults(ndpi_str, 0 /* encrypted */, 1 /* app proto */, NDPI_PROTOCOL_ACCEPTABLE, NDPI_PROTOCOL_RUBIKA_RUBINO_FILE,
+                            "RUBINO_FILE", NDPI_PROTOCOL_CATEGORY_CHAT,
+                            ndpi_build_default_ports(ports_a, 0, 0, 0, 0, 0) /* TCP */,
+                            ndpi_build_default_ports(ports_b, 0, 0, 0, 0, 0) /* UDP */);
+    ndpi_set_proto_defaults(ndpi_str, 0 /* encrypted */, 1 /* app proto */, NDPI_PROTOCOL_ACCEPTABLE, NDPI_PROTOCOL_RUBIKA_MESSANGER_FILE,
+                            "MESSANGER_FILE", NDPI_PROTOCOL_CATEGORY_CHAT,
+                            ndpi_build_default_ports(ports_a, 0, 0, 0, 0, 0) /* TCP */,
+                            ndpi_build_default_ports(ports_b, 0, 0, 0, 0, 0) /* UDP */);
+    ndpi_set_proto_defaults(ndpi_str, 0 /* encrypted */, 1 /* app proto */, NDPI_PROTOCOL_ACCEPTABLE, NDPI_PROTOCOL_RUBIKA_SERVICE,
+                            "RUBIKA_SERVICE", NDPI_PROTOCOL_CATEGORY_CHAT,
+                            ndpi_build_default_ports(ports_a, 0, 0, 0, 0, 0) /* TCP */,
+                            ndpi_build_default_ports(ports_b, 0, 0, 0, 0, 0) /* UDP */);
+    ndpi_set_proto_defaults(ndpi_str, 0 /* encrypted */, 1 /* app proto */, NDPI_PROTOCOL_ACCEPTABLE, NDPI_PROTOCOL_RUBIKA_RUBINO,
+                            "RUBIKA_RUBINO", NDPI_PROTOCOL_CATEGORY_CHAT,
+                            ndpi_build_default_ports(ports_a, 0, 0, 0, 0, 0) /* TCP */,
+                            ndpi_build_default_ports(ports_b, 0, 0, 0, 0, 0) /* UDP */);
+    ndpi_set_proto_defaults(ndpi_str, 0 /* encrypted */, 1 /* app proto */, NDPI_PROTOCOL_ACCEPTABLE, NDPI_PROTOCOL_RUBIKA_MESSANGER,
+                            "RUBIKA_MESSANGER", NDPI_PROTOCOL_CATEGORY_CHAT,
+                            ndpi_build_default_ports(ports_a, 0, 0, 0, 0, 0) /* TCP */,
+                            ndpi_build_default_ports(ports_b, 0, 0, 0, 0, 0) /* UDP */);
+    ndpi_set_proto_defaults(ndpi_str, 0 /* encrypted */, 1 /* app proto */, NDPI_PROTOCOL_ACCEPTABLE, NDPI_PROTOCOL_RUBIKA,
+                            "RUBIKA", NDPI_PROTOCOL_CATEGORY_CHAT,
+                            ndpi_build_default_ports(ports_a, 0, 0, 0, 0, 0) /* TCP */,
+                            ndpi_build_default_ports(ports_b, 0, 0, 0, 0, 0) /* UDP */);
     ndpi_set_proto_defaults(ndpi_str, 0 /* encrypted */, 1 /* app proto */, NDPI_PROTOCOL_ACCEPTABLE, NDPI_PROTOCOL_BALE,
                             "BALE", NDPI_PROTOCOL_CATEGORY_CHAT,
                             ndpi_build_default_ports(ports_a, 0, 0, 0, 0, 0) /* TCP */,
@@ -4862,6 +4886,8 @@ static int ndpi_callback_init(struct ndpi_detection_module_struct *ndpi_str) {
     /* TELEGRAM */
     init_telegram_dissector(ndpi_str, &a);
     init_bale_dissector(ndpi_str, &a);
+    init_rubika_dissector(ndpi_str, &a);
+    init_etta_dissector(ndpi_str, &a);
 
     /* QUIC */
     init_quic_dissector(ndpi_str, &a);
@@ -8012,6 +8038,7 @@ void ndpi_packet_src_ip_get(const struct ndpi_packet_struct *packet, ndpi_ip_add
 
 /* get the destination ip address from packet and put it into ip */
 /* NTOP */
+
 void ndpi_packet_dst_ip_get(const struct ndpi_packet_struct *packet, ndpi_ip_addr_t *ip) {
     NDPI_PROTOCOL_IP_clear(ip);
 

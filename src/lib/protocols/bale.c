@@ -82,6 +82,47 @@ void ndpi_search_bale(struct ndpi_detection_module_struct *ndpi_struct,
             }
 
 
+            if (packet->payload[i] == 0xaa && packet->payload[i + 1] == 0x03 && packet->payload[i + 2] == 0x03
+                    ) {
+                bale_file1 = 1;
+            }
+            if (packet->payload[i] == 0xae && packet->payload[i + 1] == 0x01 && packet->payload[i + 2] == 0x00 &&
+                packet->payload[i + 3] == 0x00
+                    ) {
+
+                bale_file2 = 1;
+
+            }
+
+            if (packet->payload[i] == 0x1d && packet->payload[i + 1] == 0x00 && packet->payload[i + 2] == 0x17 &&
+                packet->payload[i + 3] == 0x00
+                && packet->payload[i + 4] == 0x18 && packet->payload[i + 5] == 0x00 && packet->payload[i + 6] == 0x0b
+                    ) {
+
+                bale_file3 = 1;
+
+            }
+
+            if (packet->payload[i] == 0x69 && packet->payload[i + 1] == 0x6c && packet->payload[i + 2] == 0x6f &&
+                packet->payload[i + 3] == 0x6f
+                && packet->payload[i + 4] == 0x2e && packet->payload[i + 5] == 0x62 && packet->payload[i + 6] == 0x61 &&
+                packet->payload[i + 7] == 0x6c
+                    ) {
+
+                bale_file4 = 1;
+
+            }
+
+            if (packet->payload[i] == 0x14 && packet->payload[i + 1] == 0x00 && packet->payload[i + 2] == 0x9c &&
+                packet->payload[i + 3] == 0x00
+                && packet->payload[i + 4] == 0x9d && packet->payload[i + 5] == 0x00 && packet->payload[i + 6] == 0x2f &&
+                packet->payload[i + 7] == 0x00
+                    ) {
+
+                bale_file5 = 1;
+
+            }
+
 
         }
 
@@ -89,7 +130,9 @@ void ndpi_search_bale(struct ndpi_detection_module_struct *ndpi_struct,
         if (bale_1 == 1 && bale_2 == 1 && bale_3 == 1) {
             ndpi_int_bale_message_add_connection(ndpi_struct, flow);
         }
-
+        if (bale_file1 == 1 && bale_file2 == 1 && bale_file3 == 1 && bale_file4 == 1 && bale_file5 == 1) {
+            ndpi_int_bale_file_add_connection(ndpi_struct, flow);
+        }
 
     }
 
