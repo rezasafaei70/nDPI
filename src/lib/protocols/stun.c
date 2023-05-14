@@ -290,6 +290,7 @@ static ndpi_int_stun_t ndpi_int_check_stun(struct ndpi_detection_module_struct *
         return (NDPI_IS_STUN); /* This is WhatsApp Call */
     }
     // printf("\n\npackets  %u ",packet->payload_packet_len);
+
     for (int i = 0; i < packet->payload_packet_len; i++) {
 
         if (packet->payload[i] == 0x72 && packet->payload[i + 1] == 0x75 && packet->payload[i + 2] == 0x62

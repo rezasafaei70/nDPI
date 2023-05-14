@@ -20,10 +20,13 @@
 /* ****************************************************** */
 
 
-static ndpi_network ndpi_protocol_bale_protocol_list[] = {
-  { 0xB90DE740 /* 185.13.231.64/28 */, 28, NDPI_PROTOCOL_BALE },
-  { 0x25E489D0 /* 37.228.137.208/28 */, 28, NDPI_PROTOCOL_BALE },
-  { 0x2BD4478 /* 2.189.68.126/24 */, 24, NDPI_PROTOCOL_BALE },
+static ndpi_network ndpi_protocol_rubika_protocol_list[] = {
+  { 0x56AA6D /* 5.106.10.109/24 */, 24, NDPI_PROTOCOL_RUBIKA },
+  { 0x56A86A /* 5.106.8.106/24 */, 24, NDPI_PROTOCOL_RUBIKA },
+  { 0x56A758 /* 5.106.7.88/24 */, 24, NDPI_PROTOCOL_RUBIKA },
+  { 0x56A6DB /* 5.106.6.201/24 */, 24, NDPI_PROTOCOL_RUBIKA},
+  { 0x56A6DB /* 5.106.3.67/24 */, 28, NDPI_PROTOCOL_RUBIKA},
+  { 0x56A39 /* 5.106.3.9/24 */, 24, NDPI_PROTOCOL_RUBIKA_CALL },
  /* End */
  { 0x0, 0, 0 }
 };

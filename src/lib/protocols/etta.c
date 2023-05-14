@@ -25,12 +25,12 @@ void ndpi_search_etta(struct ndpi_detection_module_struct *ndpi_struct,
     struct ndpi_packet_struct *packet = &ndpi_struct->packet;
 
     NDPI_LOG_DBG(ndpi_struct, "search etta\n");
-
+//    printf("%u rr ",packet->payload_packet_len);
     if (packet->payload_packet_len == 0)
         return;
 
     if (packet->tcp != NULL) {
-        printf("reza  %d ", packet->payload_packet_len);
+
         for (int i = 0; i < packet->payload_packet_len; i++) {
 //            printf("%02x  ",packet->payload[i]);
 

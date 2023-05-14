@@ -81,6 +81,7 @@
 #include "inc_generated/ndpi_asn_telegram.c.inc"
 #include "inc_generated/ndpi_asn_etta.c.inc"
 #include "inc_generated/ndpi_asn_bale.c.inc"
+#include "inc_generated/ndpi_asn_rubika.c.inc"
 #include "inc_generated/ndpi_asn_apple.c.inc"
 #include "inc_generated/ndpi_asn_twitter.c.inc"
 #include "inc_generated/ndpi_asn_netflix.c.inc"
@@ -3006,6 +3007,7 @@ struct ndpi_detection_module_struct *ndpi_init_detection_module(ndpi_init_prefs 
             ndpi_init_ptree_ipv4(ndpi_str, ndpi_str->protocols_ptree, ndpi_protocol_telegram_protocol_list);
             ndpi_init_ptree_ipv4(ndpi_str, ndpi_str->protocols_ptree, ndpi_protocol_etta_protocol_list);
             ndpi_init_ptree_ipv4(ndpi_str, ndpi_str->protocols_ptree, ndpi_protocol_bale_protocol_list);
+            ndpi_init_ptree_ipv4(ndpi_str, ndpi_str->protocols_ptree, ndpi_protocol_rubika_protocol_list);
             ndpi_init_ptree_ipv4(ndpi_str, ndpi_str->protocols_ptree, ndpi_protocol_apple_protocol_list);
             ndpi_init_ptree_ipv4(ndpi_str, ndpi_str->protocols_ptree, ndpi_protocol_twitter_protocol_list);
             ndpi_init_ptree_ipv4(ndpi_str, ndpi_str->protocols_ptree, ndpi_protocol_netflix_protocol_list);
@@ -4595,16 +4597,8 @@ static int ndpi_callback_init(struct ndpi_detection_module_struct *ndpi_str) {
     /* STARCRAFT */
     init_starcraft_dissector(ndpi_str, &a);
 
-//    etta
-    init_etta_dissector(ndpi_str, &a);
-    // bale
-    init_bale_dissector(ndpi_str, &a);
-//    rubika
-    init_rubika_dissector(ndpi_str, &a);
-
-
     /* TLS+DTLS */
-    init_tls_dissector(ndpi_str, &a);
+//    init_tls_dissector(ndpi_str, &a);
 
     /* RTP */
     init_rtp_dissector(ndpi_str, &a);
@@ -5033,7 +5027,7 @@ static int ndpi_callback_init(struct ndpi_detection_module_struct *ndpi_str) {
     init_genshin_impact_dissector(ndpi_str, &a);
 
     /* Z39.50 international standard client–server, application layer communications protocol */
-    init_z3950_dissector(ndpi_str, &a);
+//    init_z3950_dissector(ndpi_str, &a);
 
     /* AVAST SecureDNS */
     init_avast_securedns_dissector(ndpi_str, &a);
@@ -5148,7 +5142,12 @@ static int ndpi_callback_init(struct ndpi_detection_module_struct *ndpi_str) {
 
     /* Heroes of the Storm */
     init_hots_dissector(ndpi_str, &a);
-
+    //    etta
+    init_etta_dissector(ndpi_str,&a);
+    // bale
+    init_bale_dissector(ndpi_str,&a);
+    // rubika
+    init_rubika_dissector(ndpi_str,&a);
 #ifdef CUSTOM_NDPI_PROTOCOLS
 #include "../../../nDPI-custom/custom_ndpi_main_init.c"
 #endif
