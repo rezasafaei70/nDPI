@@ -51,6 +51,6 @@ setup(
         'Topic :: System :: Networking :: Monitoring',
     ],
     project_urls={
-        'GitHub': 'https://github.com/ntop/nDPI',
+        'GitHub': 'https://github.com/rezasafaei70/nDPI',
     }
 )
