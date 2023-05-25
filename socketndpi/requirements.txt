@@ -1,3 +1,4 @@
 dpkt>=1.9.7.2
 prometheus-client
 python-dotenv
+SQLAlchemy

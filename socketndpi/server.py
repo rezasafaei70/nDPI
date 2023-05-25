@@ -2,7 +2,7 @@ import socket
 import dpkt
 import time
 
-fie_path = 'in/bale.pcap'
+fie_path = '/home/boshra/pcap/bale.pcap'
 
 
 def server_program():
@@ -43,7 +43,7 @@ def server_program():
         print("end file ")
         # message = 'end'
         # conn.send(message.encode())
-        time.sleep(100000)
+        time.sleep(5)
 
 
 

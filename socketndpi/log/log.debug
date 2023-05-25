@@ -1,8 +1,130 @@
-13:15:04,20 root ERROR list index out of range
-13:15:21,64 root ERROR list index out of range
-13:15:58,905 root ERROR list index out of range
-13:17:23,631 root ERROR list index out of range
-13:18:22,81 root DEBUG ['bale.pcap']
-13:18:22,155 root ERROR list index out of range
-13:18:38,737 root DEBUG ['bale.pcap']
-13:18:38,808 root ERROR list index out of range
+08:54:00,603 root ERROR [Errno 111] Connection refused
+08:54:00,674 root INFO ananlize protcols :protocols:DNS           packets: 2             bytes: 179           flows: 1            protocols:BALE_MESSANGER packets: 219           bytes: 24260         flows: 2            
+08:54:00,674 root INFO ananlize info Flow Memory (per flow):  912 B        Actual Memory:           6.57 MB      Peak Memory:             6.57 MB      Setup Time:              29 msecPacket Processing Time:  0 msec
+
+Traffic statistics:Ethernet bytes:        29743         (includes ethernet CRC/IFC/trailer)Discarded bytes:       3072         IP packets:            221           of 223 packets totalIP bytes:              24439         (avg pkt size 109 bytes)Unique flows:          3            TCP Packets:           219          UDP Packets:           2            VLAN Packets:          0            MPLS Packets:          0            PPPoE Packets:         0            Fragmented Packets:    0            Max Packet size:       1408         Packet Len < 64:       162          Packet Len 64-128:     8            Packet Len 128-256:    35           Packet Len 256-1024:   15           Packet Len 1024-1500:  1            Packet Len > 1500:     0            nDPI throughput:       669.70 K pps / 687.64 Mb/secAnalysis begin:        25/May/2023 08:49:51Analysis end:          25/May/2023 08:53:33Traffic throughput:    0.99 pps / 1.05 Kb/secTraffic duration:      222.282 secGuessed flow protos:   0            DPI Packets (TCP):     12            (6.00 pkts/flow)DPI Packets (UDP):     2             (2.00 pkts/flow)Confidence: DPI        3             (flows)
+
+
+
+08:54:00,674 root INFO remove file 1684991991.pcap
+08:59:06,988 root INFO 34424
+08:59:06,989 root INFO moved file
+08:59:06,989 root ERROR write to closed file
+08:59:11,15 root INFO ananlize protcols :protocols:DNS           packets: 2             bytes: 179           flows: 1            protocols:BALE_MESSANGER packets: 297           bytes: 31133         flows: 2            
+08:59:11,15 root INFO ananlize info Flow Memory (per flow):  912 B        Actual Memory:           6.58 MB      Peak Memory:             6.58 MB      Setup Time:              29 msecPacket Processing Time:  0 msec
+
+Traffic statistics:Ethernet bytes:        38488         (includes ethernet CRC/IFC/trailer)Discarded bytes:       3072         IP packets:            299           of 301 packets totalIP bytes:              31312         (avg pkt size 104 bytes)Unique flows:          3            TCP Packets:           297          UDP Packets:           2            VLAN Packets:          0            MPLS Packets:          0            PPPoE Packets:         0            Fragmented Packets:    0            Max Packet size:       1408         Packet Len < 64:       223          Packet Len 64-128:     8            Packet Len 128-256:    50           Packet Len 256-1024:   17           Packet Len 1024-1500:  1            Packet Len > 1500:     0            nDPI throughput:       895.21 K pps / 879.16 Mb/secAnalysis begin:        25/May/2023 08:54:05Analysis end:          25/May/2023 08:59:05Traffic throughput:    1.00 pps / 1.00 Kb/secTraffic duration:      300.378 secGuessed flow protos:   0            DPI Packets (TCP):     12            (6.00 pkts/flow)DPI Packets (UDP):     2             (2.00 pkts/flow)Confidence: DPI        3             (flows)
+
+
+
+08:59:11,15 root INFO remove file 1684992245.pcap.pcap
+09:04:14,379 root INFO 34424
+09:04:14,380 root INFO moved file
+09:04:14,380 root ERROR write to closed file
+09:04:16,352 root INFO ananlize protcols :protocols:DNS           packets: 2             bytes: 179           flows: 1            protocols:BALE_MESSANGER packets: 297           bytes: 31133         flows: 2            
+09:04:16,352 root INFO ananlize info Flow Memory (per flow):  912 B        Actual Memory:           6.58 MB      Peak Memory:             6.58 MB      Setup Time:              31 msecPacket Processing Time:  0 msec
+
+Traffic statistics:Ethernet bytes:        38488         (includes ethernet CRC/IFC/trailer)Discarded bytes:       3072         IP packets:            299           of 301 packets totalIP bytes:              31312         (avg pkt size 104 bytes)Unique flows:          3            TCP Packets:           297          UDP Packets:           2            VLAN Packets:          0            MPLS Packets:          0            PPPoE Packets:         0            Fragmented Packets:    0            Max Packet size:       1408         Packet Len < 64:       223          Packet Len 64-128:     8            Packet Len 128-256:    50           Packet Len 256-1024:   17           Packet Len 1024-1500:  1            Packet Len > 1500:     0            nDPI throughput:       711.90 K pps / 699.14 Mb/secAnalysis begin:        25/May/2023 08:59:12Analysis end:          25/May/2023 09:04:13Traffic throughput:    1.00 pps / 1.00 Kb/secTraffic duration:      300.383 secGuessed flow protos:   0            DPI Packets (TCP):     12            (6.00 pkts/flow)DPI Packets (UDP):     2             (2.00 pkts/flow)Confidence: DPI        3             (flows)
+
+
+
+09:04:16,352 root INFO remove file 1684992552.pcap.pcap
+09:09:21,778 root INFO 34424
+09:09:21,779 root INFO moved file
+09:09:21,779 root ERROR write to closed file
+09:09:26,701 root INFO ananlize protcols :protocols:DNS           packets: 2             bytes: 179           flows: 1            protocols:BALE_MESSANGER packets: 297           bytes: 31133         flows: 2            
+09:09:26,701 root INFO ananlize info Flow Memory (per flow):  912 B        Actual Memory:           6.58 MB      Peak Memory:             6.58 MB      Setup Time:              28 msecPacket Processing Time:  0 msec
+
+Traffic statistics:Ethernet bytes:        38488         (includes ethernet CRC/IFC/trailer)Discarded bytes:       3072         IP packets:            299           of 301 packets totalIP bytes:              31312         (avg pkt size 104 bytes)Unique flows:          3            TCP Packets:           297          UDP Packets:           2            VLAN Packets:          0            MPLS Packets:          0            PPPoE Packets:         0            Fragmented Packets:    0            Max Packet size:       1408         Packet Len < 64:       223          Packet Len 64-128:     8            Packet Len 128-256:    50           Packet Len 256-1024:   17           Packet Len 1024-1500:  1            Packet Len > 1500:     0            nDPI throughput:       871.72 K pps / 856.09 Mb/secAnalysis begin:        25/May/2023 09:04:20Analysis end:          25/May/2023 09:09:20Traffic throughput:    1.00 pps / 1.00 Kb/secTraffic duration:      300.391 secGuessed flow protos:   0            DPI Packets (TCP):     12            (6.00 pkts/flow)DPI Packets (UDP):     2             (2.00 pkts/flow)Confidence: DPI        3             (flows)
+
+
+
+09:09:26,701 root INFO remove file 1684992860.pcap.pcap
+09:14:29,180 root INFO 34424
+09:14:29,180 root INFO moved file
+09:14:29,180 root ERROR write to closed file
+09:14:32,53 root INFO ananlize protcols :protocols:DNS           packets: 2             bytes: 179           flows: 1            protocols:BALE_MESSANGER packets: 297           bytes: 31133         flows: 2            
+09:14:32,54 root INFO ananlize info Flow Memory (per flow):  912 B        Actual Memory:           6.58 MB      Peak Memory:             6.58 MB      Setup Time:              28 msecPacket Processing Time:  0 msec
+
+Traffic statistics:Ethernet bytes:        38488         (includes ethernet CRC/IFC/trailer)Discarded bytes:       3072         IP packets:            299           of 301 packets totalIP bytes:              31312         (avg pkt size 104 bytes)Unique flows:          3            TCP Packets:           297          UDP Packets:           2            VLAN Packets:          0            MPLS Packets:          0            PPPoE Packets:         0            Fragmented Packets:    0            Max Packet size:       1408         Packet Len < 64:       223          Packet Len 64-128:     8            Packet Len 128-256:    50           Packet Len 256-1024:   17           Packet Len 1024-1500:  1            Packet Len > 1500:     0            nDPI throughput:       897.90 K pps / 881.80 Mb/secAnalysis begin:        25/May/2023 09:09:27Analysis end:          25/May/2023 09:14:28Traffic throughput:    1.00 pps / 1.00 Kb/secTraffic duration:      300.395 secGuessed flow protos:   0            DPI Packets (TCP):     12            (6.00 pkts/flow)DPI Packets (UDP):     2             (2.00 pkts/flow)Confidence: DPI        3             (flows)
+
+
+
+09:14:32,54 root INFO remove file 1684993167.pcap.pcap
+09:19:36,589 root INFO 34424
+09:19:36,589 root INFO moved file
+09:19:36,590 root ERROR write to closed file
+09:19:37,426 root INFO ananlize protcols :protocols:DNS           packets: 2             bytes: 179           flows: 1            protocols:BALE_MESSANGER packets: 297           bytes: 31133         flows: 2            
+09:19:37,426 root INFO ananlize info Flow Memory (per flow):  912 B        Actual Memory:           6.58 MB      Peak Memory:             6.58 MB      Setup Time:              28 msecPacket Processing Time:  0 msec
+
+Traffic statistics:Ethernet bytes:        38488         (includes ethernet CRC/IFC/trailer)Discarded bytes:       3072         IP packets:            299           of 301 packets totalIP bytes:              31312         (avg pkt size 104 bytes)Unique flows:          3            TCP Packets:           297          UDP Packets:           2            VLAN Packets:          0            MPLS Packets:          0            PPPoE Packets:         0            Fragmented Packets:    0            Max Packet size:       1408         Packet Len < 64:       223          Packet Len 64-128:     8            Packet Len 128-256:    50           Packet Len 256-1024:   17           Packet Len 1024-1500:  1            Packet Len > 1500:     0            nDPI throughput:       917.18 K pps / 900.74 Mb/secAnalysis begin:        25/May/2023 09:14:35Analysis end:          25/May/2023 09:19:35Traffic throughput:    1.00 pps / 1.00 Kb/secTraffic duration:      300.401 secGuessed flow protos:   0            DPI Packets (TCP):     12            (6.00 pkts/flow)DPI Packets (UDP):     2             (2.00 pkts/flow)Confidence: DPI        3             (flows)
+
+
+
+09:19:37,426 root INFO remove file 1684993475.pcap.pcap
+09:24:43,990 root INFO 34424
+09:24:43,991 root INFO moved file
+09:24:43,991 root ERROR write to closed file
+09:24:47,799 root INFO ananlize protcols :protocols:DNS           packets: 2             bytes: 179           flows: 1            protocols:BALE_MESSANGER packets: 297           bytes: 31133         flows: 2            
+09:24:47,799 root INFO ananlize info Flow Memory (per flow):  912 B        Actual Memory:           6.58 MB      Peak Memory:             6.58 MB      Setup Time:              28 msecPacket Processing Time:  0 msec
+
+Traffic statistics:Ethernet bytes:        38488         (includes ethernet CRC/IFC/trailer)Discarded bytes:       3072         IP packets:            299           of 301 packets totalIP bytes:              31312         (avg pkt size 104 bytes)Unique flows:          3            TCP Packets:           297          UDP Packets:           2            VLAN Packets:          0            MPLS Packets:          0            PPPoE Packets:         0            Fragmented Packets:    0            Max Packet size:       1408         Packet Len < 64:       223          Packet Len 64-128:     8            Packet Len 128-256:    50           Packet Len 256-1024:   17           Packet Len 1024-1500:  1            Packet Len > 1500:     0            nDPI throughput:       866.67 K pps / 851.13 Mb/secAnalysis begin:        25/May/2023 09:19:42Analysis end:          25/May/2023 09:24:42Traffic throughput:    1.00 pps / 1.00 Kb/secTraffic duration:      300.393 secGuessed flow protos:   0            DPI Packets (TCP):     12            (6.00 pkts/flow)DPI Packets (UDP):     2             (2.00 pkts/flow)Confidence: DPI        3             (flows)
+
+
+
+09:24:47,799 root INFO remove file 1684993782.pcap.pcap
+09:29:51,385 root INFO 34424
+09:29:51,386 root INFO moved file
+09:29:51,386 root ERROR write to closed file
+09:29:53,161 root INFO ananlize protcols :protocols:DNS           packets: 2             bytes: 179           flows: 1            protocols:BALE_MESSANGER packets: 297           bytes: 31133         flows: 2            
+09:29:53,161 root INFO ananlize info Flow Memory (per flow):  912 B        Actual Memory:           6.58 MB      Peak Memory:             6.58 MB      Setup Time:              30 msecPacket Processing Time:  0 msec
+
+Traffic statistics:Ethernet bytes:        38488         (includes ethernet CRC/IFC/trailer)Discarded bytes:       3072         IP packets:            299           of 301 packets totalIP bytes:              31312         (avg pkt size 104 bytes)Unique flows:          3            TCP Packets:           297          UDP Packets:           2            VLAN Packets:          0            MPLS Packets:          0            PPPoE Packets:         0            Fragmented Packets:    0            Max Packet size:       1408         Packet Len < 64:       223          Packet Len 64-128:     8            Packet Len 128-256:    50           Packet Len 256-1024:   17           Packet Len 1024-1500:  1            Packet Len > 1500:     0            nDPI throughput:       869.19 K pps / 853.61 Mb/secAnalysis begin:        25/May/2023 09:24:49Analysis end:          25/May/2023 09:29:50Traffic throughput:    1.00 pps / 1.00 Kb/secTraffic duration:      300.387 secGuessed flow protos:   0            DPI Packets (TCP):     12            (6.00 pkts/flow)DPI Packets (UDP):     2             (2.00 pkts/flow)Confidence: DPI        3             (flows)
+
+
+
+09:29:53,161 root INFO remove file 1684994089.pcap.pcap
+09:34:58,789 root INFO 34424
+09:34:58,790 root INFO moved file
+09:34:58,790 root ERROR write to closed file
+09:35:03,540 root INFO ananlize protcols :protocols:DNS           packets: 2             bytes: 179           flows: 1            protocols:BALE_MESSANGER packets: 297           bytes: 31133         flows: 2            
+09:35:03,540 root INFO ananlize info Flow Memory (per flow):  912 B        Actual Memory:           6.58 MB      Peak Memory:             6.58 MB      Setup Time:              28 msecPacket Processing Time:  0 msec
+
+Traffic statistics:Ethernet bytes:        38488         (includes ethernet CRC/IFC/trailer)Discarded bytes:       3072         IP packets:            299           of 301 packets totalIP bytes:              31312         (avg pkt size 104 bytes)Unique flows:          3            TCP Packets:           297          UDP Packets:           2            VLAN Packets:          0            MPLS Packets:          0            PPPoE Packets:         0            Fragmented Packets:    0            Max Packet size:       1408         Packet Len < 64:       223          Packet Len 64-128:     8            Packet Len 128-256:    50           Packet Len 256-1024:   17           Packet Len 1024-1500:  1            Packet Len > 1500:     0            nDPI throughput:       897.90 K pps / 881.80 Mb/secAnalysis begin:        25/May/2023 09:29:57Analysis end:          25/May/2023 09:34:57Traffic throughput:    1.00 pps / 1.00 Kb/secTraffic duration:      300.396 secGuessed flow protos:   0            DPI Packets (TCP):     12            (6.00 pkts/flow)DPI Packets (UDP):     2             (2.00 pkts/flow)Confidence: DPI        3             (flows)
+
+
+
+09:35:03,540 root INFO remove file 1684994397.pcap.pcap
+09:40:06,191 root INFO 34424
+09:40:06,191 root INFO moved file
+09:40:06,191 root ERROR write to closed file
+09:40:08,903 root INFO ananlize protcols :protocols:DNS           packets: 2             bytes: 179           flows: 1            protocols:BALE_MESSANGER packets: 297           bytes: 31133         flows: 2            
+09:40:08,903 root INFO ananlize info Flow Memory (per flow):  912 B        Actual Memory:           6.58 MB      Peak Memory:             6.58 MB      Setup Time:              28 msecPacket Processing Time:  0 msec
+
+Traffic statistics:Ethernet bytes:        38488         (includes ethernet CRC/IFC/trailer)Discarded bytes:       3072         IP packets:            299           of 301 packets totalIP bytes:              31312         (avg pkt size 104 bytes)Unique flows:          3            TCP Packets:           297          UDP Packets:           2            VLAN Packets:          0            MPLS Packets:          0            PPPoE Packets:         0            Fragmented Packets:    0            Max Packet size:       1408         Packet Len < 64:       223          Packet Len 64-128:     8            Packet Len 128-256:    50           Packet Len 256-1024:   17           Packet Len 1024-1500:  1            Packet Len > 1500:     0            nDPI throughput:       738.27 K pps / 725.04 Mb/secAnalysis begin:        25/May/2023 09:35:04Analysis end:          25/May/2023 09:40:05Traffic throughput:    1.00 pps / 1.00 Kb/secTraffic duration:      300.393 secGuessed flow protos:   0            DPI Packets (TCP):     12            (6.00 pkts/flow)DPI Packets (UDP):     2             (2.00 pkts/flow)Confidence: DPI        3             (flows)
+
+
+
+09:40:08,903 root INFO remove file 1684994704.pcap.pcap
+09:45:13,594 root INFO 34424
+09:45:13,595 root INFO moved file
+09:45:13,595 root ERROR write to closed file
+09:45:14,278 root INFO ananlize protcols :protocols:DNS           packets: 2             bytes: 179           flows: 1            protocols:BALE_MESSANGER packets: 297           bytes: 31133         flows: 2            
+09:45:14,278 root INFO ananlize info Flow Memory (per flow):  912 B        Actual Memory:           6.58 MB      Peak Memory:             6.58 MB      Setup Time:              28 msecPacket Processing Time:  0 msec
+
+Traffic statistics:Ethernet bytes:        38488         (includes ethernet CRC/IFC/trailer)Discarded bytes:       3072         IP packets:            299           of 301 packets totalIP bytes:              31312         (avg pkt size 104 bytes)Unique flows:          3            TCP Packets:           297          UDP Packets:           2            VLAN Packets:          0            MPLS Packets:          0            PPPoE Packets:         0            Fragmented Packets:    0            Max Packet size:       1408         Packet Len < 64:       223          Packet Len 64-128:     8            Packet Len 128-256:    50           Packet Len 256-1024:   17           Packet Len 1024-1500:  1            Packet Len > 1500:     0            nDPI throughput:       949.21 K pps / 932.19 Mb/secAnalysis begin:        25/May/2023 09:40:12Analysis end:          25/May/2023 09:45:12Traffic throughput:    1.00 pps / 1.00 Kb/secTraffic duration:      300.398 secGuessed flow protos:   0            DPI Packets (TCP):     12            (6.00 pkts/flow)DPI Packets (UDP):     2             (2.00 pkts/flow)Confidence: DPI        3             (flows)
+
+
+
+09:45:14,278 root INFO remove file 1684995012.pcap.pcap
+09:50:20,993 root INFO 34424
+09:50:20,994 root INFO moved file
+09:50:20,994 root ERROR write to closed file
+09:50:24,644 root INFO ananlize protcols :protocols:DNS           packets: 2             bytes: 179           flows: 1            protocols:BALE_MESSANGER packets: 297           bytes: 31133         flows: 2            
+09:50:24,644 root INFO ananlize info Flow Memory (per flow):  912 B        Actual Memory:           6.58 MB      Peak Memory:             6.58 MB      Setup Time:              28 msecPacket Processing Time:  0 msec
+
+Traffic statistics:Ethernet bytes:        38488         (includes ethernet CRC/IFC/trailer)Discarded bytes:       3072         IP packets:            299           of 301 packets totalIP bytes:              31312         (avg pkt size 104 bytes)Unique flows:          3            TCP Packets:           297          UDP Packets:           2            VLAN Packets:          0            MPLS Packets:          0            PPPoE Packets:         0            Fragmented Packets:    0            Max Packet size:       1408         Packet Len < 64:       223          Packet Len 64-128:     8            Packet Len 128-256:    50           Packet Len 256-1024:   17           Packet Len 1024-1500:  1            Packet Len > 1500:     0            nDPI throughput:       928.57 K pps / 911.93 Mb/secAnalysis begin:        25/May/2023 09:45:19Analysis end:          25/May/2023 09:50:19Traffic throughput:    1.00 pps / 1.00 Kb/secTraffic duration:      300.390 secGuessed flow protos:   0            DPI Packets (TCP):     12            (6.00 pkts/flow)DPI Packets (UDP):     2             (2.00 pkts/flow)Confidence: DPI        3             (flows)
+
+
+
+09:50:24,644 root INFO remove file 1684995319.pcap.pcap

@@ -3785,7 +3785,7 @@ static void printResults(u_int64_t processing_time_usec, u_int64_t setup_time_us
 		cumulative_stats.protocol_flows[i]);
 
       if(!quiet_mode) {
-	printf("\t%-20s packets: %-13llu bytes: %-13llu "
+	printf("\tprotocols:%-13s packets: %-13llu bytes: %-13llu "
 	       "flows: %-13u\n",
 	       ndpi_get_proto_name(ndpi_thread_info[0].workflow->ndpi_struct,
 				   ndpi_map_ndpi_id_to_user_proto_id(ndpi_thread_info[0].workflow->ndpi_struct, i)),

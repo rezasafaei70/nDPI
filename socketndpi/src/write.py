@@ -1,4 +1,6 @@
 import datetime
+import os
+
 import dpkt
 from src.providers import q
 from config.global_config import logging
@@ -14,21 +16,21 @@ def write_file():
                 file_path = 'in/{name}.pcap'.format(name=name)
                 f = open(file_path, "wb")
                 fd = dpkt.pcap.Writer(f, linktype=101)
-            if data_len >= 34424:
+            data_len = data_len + len(data)
+            print(data_len)
+            if data_len >= 34423:
                 logging.info(data_len)
                 c1.inc()
                 data_len = 0
                 f.flush()
                 f.close()
-                src_path = 'in/{file}'.format(file=file_path)
-                dest_path = 'out/{file}'.format(file=file_path)
+                src_path = file_path
+                name = os.path.basename(file_path)
+                dest_path = 'out/{name}.pcap'.format(name=name)
                 shutil.move(src_path,dest_path)
-                print("end file")
-            if data_len < 34424:
+                logging.info("moved file")
+            if data_len < 34423:
                 c.inc()
-                data_len = data_len + len(data)
-                print(data_len)
-                print("//////")
                 fd.writepkt(data)
         except Exception as e:
             logging.error(str(e))

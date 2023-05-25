@@ -1,4 +1,8 @@
+import logging
+import os
+import shutil
 import socket
+import time
 
 from src.dpi import analize
 from src.providers import q
@@ -13,7 +17,14 @@ def client_program():
     port = 8000  # socket server port number
 
     client_socket = socket.socket()  # instantiate
-    client_socket.connect((host, port))  # connect to the server
+    while True:
+        try:
+            client_socket.connect((host, port))  # connect to the server
+            print("connected")
+            break
+        except Exception as e:
+            logging.error(str(e))
+        time.sleep(5)
     message = 'ok'
     client_socket.send(message.encode())
     while True:
@@ -32,6 +43,9 @@ def client_program():
 
 
 if __name__ == '__main__':
+    dirs = os.listdir('in')
+    for item in dirs:
+        shutil.move('in/'+item,'out/'+item)
     start_http_server(9000)
     t = threading.Thread(target=write_file)
     t.start()

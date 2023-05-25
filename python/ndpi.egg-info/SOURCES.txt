@@ -1,0 +1,10 @@
+README.md
+setup.py
+ndpi/__init__.py
+ndpi/ndpi.py
+ndpi/ndpi_build.py
+ndpi.egg-info/PKG-INFO
+ndpi.egg-info/SOURCES.txt
+ndpi.egg-info/dependency_links.txt
+ndpi.egg-info/requires.txt
+ndpi.egg-info/top_level.txt
