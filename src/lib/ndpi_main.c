@@ -2678,18 +2678,21 @@ int ndpi_load_ipv4_ptree(struct ndpi_detection_module_struct *ndpi_str,
 static void ndpi_init_ptree_ipv4(struct ndpi_detection_module_struct *ndpi_str,
                                  void *ptree, ndpi_network host_list[]) {
     int i;
-
     for (i = 0; host_list[i].network != 0x0; i++) {
+
         struct in_addr pin;
         ndpi_patricia_node_t *node;
 
         pin.s_addr = htonl(host_list[i].network);
+
         if ((node = add_to_ptree(ptree, AF_INET, &pin, host_list[i].cidr /* bits */)) != NULL) {
+
             /*
 	Two main cases:
 	1) ip -> protocol: uv16[0].user_value = protocol; uv16[0].additional_user_value = 0;
 	2) ip -> risk: uv16[0].user_value = risk; uv16[0].additional_user_value = 0;
       */
+
             node->value.u.uv16[0].user_value = host_list[i].value, node->value.u.uv16[0].additional_user_value = 0;
         }
     }
@@ -5147,7 +5150,7 @@ static int ndpi_callback_init(struct ndpi_detection_module_struct *ndpi_str) {
     // bale
     init_bale_dissector(ndpi_str,&a);
     // rubika
-    init_rubika_dissector(ndpi_str,&a);
+     init_rubika_dissector(ndpi_str,&a);
 #ifdef CUSTOM_NDPI_PROTOCOLS
 #include "../../../nDPI-custom/custom_ndpi_main_init.c"
 #endif
@@ -7219,8 +7222,10 @@ static ndpi_protocol ndpi_internal_detection_process_packet(struct ndpi_detectio
 
                 addr.s_addr = packet->iph->saddr;
                 net_risk = ndpi_network_risk_ptree_match(ndpi_str, &addr);
+
                 if (net_risk == NDPI_NO_RISK) {
                     addr.s_addr = packet->iph->daddr;
+
                     net_risk = ndpi_network_risk_ptree_match(ndpi_str, &addr);
                 }
 
