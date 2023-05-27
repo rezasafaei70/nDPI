@@ -126,13 +126,29 @@ void ndpi_search_bale(struct ndpi_detection_module_struct *ndpi_struct,
 
         }
 
-
         if (bale_1 == 1 && bale_2 == 1 && bale_3 == 1) {
             ndpi_int_bale_message_add_connection(ndpi_struct, flow);
         }
         if (bale_file1 == 1 && bale_file2 == 1 && bale_file3 == 1 && bale_file4 == 1 && bale_file5 == 1) {
             ndpi_int_bale_file_add_connection(ndpi_struct, flow);
         }
+
+        u_int32_t source_ip = ntohl(packet->iph->saddr);
+        u_int32_t dest_ip = ntohl(packet->iph->daddr);
+
+        if(ndpi_ips_match(source_ip, dest_ip, 0xB90DE740, 28)
+           || ndpi_ips_match(source_ip, dest_ip, 0x25E489D0, 28)
+           || ndpi_ips_match(source_ip, dest_ip, 0x2BD4478, 24)
+                ){
+
+            if (bale_1 == 1 && bale_2 == 1 && bale_3 == 1) {
+                ndpi_int_bale_message_add_connection(ndpi_struct, flow);
+            }
+
+
+        }
+
+
 
     }
 
