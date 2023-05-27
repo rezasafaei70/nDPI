@@ -31,9 +31,18 @@ void ndpi_search_etta(struct ndpi_detection_module_struct *ndpi_struct,
 
     if (packet->tcp != NULL) {
 
-        for (int i = 0; i < packet->payload_packet_len; i++) {
-//            printf("%02x  ",packet->payload[i]);
+        u_int32_t source_ip = ntohl(packet->iph->saddr);
+        u_int32_t dest_ip = ntohl(packet->iph->daddr);
 
+        if(ndpi_ips_match(source_ip, dest_ip, 0xB98E9ED3, 24)
+           || ndpi_ips_match(source_ip, dest_ip, 0xB9D0B480, 24)
+           || ndpi_ips_match(source_ip, dest_ip, 0xB98E9EE8, 24)
+           || ndpi_ips_match(source_ip, dest_ip, 0xB9D0B580, 24)
+           || ndpi_ips_match(source_ip, dest_ip, 0x2BD3A26, 24)
+
+
+                ){
+            ndpi_int_etta_add_connection(ndpi_struct, flow);
         }
 
 

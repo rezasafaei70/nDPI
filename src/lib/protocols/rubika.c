@@ -83,7 +83,7 @@ void ndpi_search_rubika(struct ndpi_detection_module_struct *ndpi_struct,
 
         u_int32_t source_ip = ntohl(packet->iph->saddr);
         u_int32_t dest_ip = ntohl(packet->iph->daddr);
-        printf("%0x ",dest_ip);
+
 
         for(int i=0;i<packet->payload_packet_len;i++){
 //            printf("%02x ",packet->payload[i]);
@@ -163,16 +163,45 @@ void ndpi_search_rubika(struct ndpi_detection_module_struct *ndpi_struct,
             else{
                 ndpi_int_rubika_add_connection(ndpi_struct, flow);
             }
-            if(ndpi_ips_match(source_ip, dest_ip, 0x56A0A6D, 24)
-               || ndpi_ips_match(source_ip, dest_ip, 0x56A086A, 24)
-               || ndpi_ips_match(source_ip, dest_ip, 0x56A0758, 24)
-               || ndpi_ips_match(source_ip, dest_ip, 0x56A06D7, 24)
-               || ndpi_ips_match(source_ip, dest_ip, 0x56A06DB, 24)
-               || ndpi_ips_match(source_ip, dest_ip, 0x56A039, 24)
 
-                    ){
 
-                ndpi_int_rubika_service_add_connection(ndpi_struct, flow);
+        }
+
+        if(ndpi_ips_match(source_ip, dest_ip, 0x56A0A6D, 24)
+           || ndpi_ips_match(source_ip, dest_ip, 0x56A086A, 24)
+           || ndpi_ips_match(source_ip, dest_ip, 0x56A0758, 24)
+           || ndpi_ips_match(source_ip, dest_ip, 0x56A06D7, 24)
+           || ndpi_ips_match(source_ip, dest_ip, 0x56A06DB, 24)
+           || ndpi_ips_match(source_ip, dest_ip, 0x56A039, 24)
+
+                ){
+            if((rubika_1 ==1 && rubika_2==1  && rubika_3==1 && rubika_4==1 && rubika_5==1)){
+                if(messanger==1){
+                    ndpi_int_rubika_messanger_add_connection(ndpi_struct, flow);
+
+                }
+
+                else if(filemessanger==1){
+                    ndpi_int_rubika_message_file_add_connection(ndpi_struct, flow);
+                }
+                else if(rubino==1){
+                    ndpi_int_rubika_rubino_add_connection(ndpi_struct, flow);
+                }
+                else if(services==1 ){
+                    ndpi_int_rubika_service_add_connection(ndpi_struct, flow);
+                }
+                else if( packet->payload_packet_len ==517){
+                    ndpi_int_rubika_messanger_add_connection(ndpi_struct, flow);
+                }
+                else if( packet->payload_packet_len ==260 || packet->payload_packet_len==259){
+                    ndpi_int_rubika_rubino_file_add_connection(ndpi_struct, flow);
+                }
+
+                else{
+                    ndpi_int_rubika_add_connection(ndpi_struct, flow);
+                }
+
+
             }
 
         }
