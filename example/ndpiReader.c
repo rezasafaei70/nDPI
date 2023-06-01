@@ -3785,7 +3785,7 @@ static void printResults(u_int64_t processing_time_usec, u_int64_t setup_time_us
 		cumulative_stats.protocol_flows[i]);
 
       if(!quiet_mode) {
-	printf("\tprotocols:%-13s packets: %-13llu bytes: %-13llu "
+	printf("\tboshraprotocols:%-13s ff packets: %-13llu ff bytes: %-13llu ff "
 	       "flows: %-13u\n",
 	       ndpi_get_proto_name(ndpi_thread_info[0].workflow->ndpi_struct,
 				   ndpi_map_ndpi_id_to_user_proto_id(ndpi_thread_info[0].workflow->ndpi_struct, i)),
@@ -3795,7 +3795,7 @@ static void printResults(u_int64_t processing_time_usec, u_int64_t setup_time_us
       }
     }
   }
-
+  printf("endDetected protocols\n");
   if(!quiet_mode) {
     printf("\n\nProtocol statistics:\n");
 
