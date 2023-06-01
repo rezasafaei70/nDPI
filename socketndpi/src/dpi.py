@@ -1,10 +1,12 @@
 import subprocess
 import time
+from datetime import datetime
 
 from src.prometheus import c2
 from config.global_config import logging
+from src.models.db import client
 import os
-
+# todo Add special character to split inside ndpi
 # This is our shell command, executed by Popen.
 def split_row(row):
     data = row.split(':')
@@ -19,10 +21,10 @@ def analize():
                     p = subprocess.Popen("../example/ndpiReader -i "+'out/'+file, stdout=subprocess.PIPE, shell=True)
                     data = p.communicate()[0].decode()
                     data = data.split('Detected protocols')
-                    detect_protcol = data[1].split('detect_protcol')[0]
+                    protocols = data[1].split('endDetected protocols')[0]
                     info = data[0].split('\n\t')[2:]
-                    protocols = detect_protcol.split('\n\n\nProtocol statistics')[0]
-                    protocols = protocols.split('\n\t')
+
+                    protocols = protocols.split('boshra')
                     ctx = {}
                     arr = []
                     logging.info("ananlize protcols "+''.join(map(str, protocols)))
@@ -36,17 +38,24 @@ def analize():
                     for item in protocols[1:]:
                         try:
                             pr = item.strip()
-                            pr = pr.split('           ')
+                            pr = pr.split('ff')
 
                             ctx1={}
                             for item1 in pr :
                                 val1 , val2 = split_row(item1)
-                                val1 , val2 = split_row(item1)
-                                ctx1[val1.strip()] = val2.strip()
+                                ctx1[val1.strip()] = val2.replace('\nend','').strip()
                             arr.append(ctx1)
                             c2.inc()
+
                         except Exception as e:
                             logging.error(str(e))
+
+                    doc = {
+                        'info': ctx,
+                        'protocols': arr,
+                        'timestamp': int(datetime.now().timestamp()),
+                    }
+                    resp = client.index(index="dpi1", body=doc)
                     os.unlink('out/'+file)
                     logging.info("remove file "+str(file))
                 except Exception as e:
