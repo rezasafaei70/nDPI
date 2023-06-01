@@ -24,7 +24,7 @@
 #ifndef __NDPI_TYPEDEFS_H__
 #define __NDPI_TYPEDEFS_H__
 
-#include "ndpi_define.h.in"
+#include "ndpi_define.h"
 #include "ndpi_protocol_ids.h"
 #include "ndpi_utils.h"
 
