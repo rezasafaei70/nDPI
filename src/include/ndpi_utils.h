@@ -24,7 +24,7 @@
 #ifndef __NDPI_UTILS_H__
 #define __NDPI_UTILS_H__
 
-#include "ndpi_define.h"
+#include "ndpi_define.h.in"
 
 #ifndef NDPI_CFFI_PREPROCESSING
 extern u_int8_t ndpi_ends_with(char *str, char *ends);
