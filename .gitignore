@@ -137,3 +137,16 @@ stamp-h1
 /windows/packages/pthreads.redist.2.9.1.4
 /windows/bin/x64_Debug-ndpiReader/ndpiReader.exe
 /windows/obj/nDPI_Debug-ndpiReader_x64/nDPI.vcxproj.FileListAbsolute.txt
+!/example/Makefile.in
+!/example/Makefile.dpdk.in
+!/tests/unit/Makefile.in
+!/tests/performance/Makefile.in
+!/tests/dga/Makefile.in
+!/rrdtool/Makefile.in
+!/influxdb/Makefile.in
+!libndpi.pc.in
+!/src/include/ndpi_define.h.in
+!/src/lib/Makefile.in
+!/doc/Doxyfile.cfg.in
+!/tests/do.sh.in
+
