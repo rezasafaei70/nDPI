@@ -3,7 +3,6 @@
 *.db-*
 *.dll
 *.ilk
-*.in
 *.ipch
 *.ko
 *.la
