@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+  ndpi:
+    container_name: ndpi
+    build:
+      context: .
+    ports:
+      - '8000:8000'
+#      - '6000:6000'
+    working_dir: "/code/socketndpi/"
+    command: "python server.py"
+    volumes:
+      - "/home/boshra/pcap/pp/:/home/boshra/pcap/pp/"
+      - "/home/boshra/log/:/code/socketndpi/log/"

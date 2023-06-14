@@ -16,7 +16,7 @@ fie_path = '/home/boshra/pcap/pp/'
 def client_program():
     host = socket.gethostname()  # as both code is running on same pc
     port = 6000  # socket server port number
-
+    print("salam")
     client_socket = socket.socket()  # instantiate
     while True:
         try:

@@ -55,7 +55,9 @@ def analize():
                         'protocols': arr,
                         'timestamp': int(datetime.now().timestamp()),
                     }
-                    resp = client.index(index="dpi1", body=doc)
+                    day = datetime.now().strftime('%Y-%m-%d')
+                    index_name = f'dpi{day}'.format(day=day)
+                    resp = client.index(index=index_name, body=doc)
                     os.unlink('out/'+file)
                     logging.info("remove file "+str(file))
                 except Exception as e:
